@@ -1,0 +1,28 @@
+{
+	"name": "demo-project",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"dependencies": {
+		"express": "^4.19.2",
+		"http-proxy-middleware": "^3.0.0"
+	},
+	"devDependencies": {
+		"mocha": "^9.0.0",
+		"supertest": "^6.2.0"
+	},
+	"scripts": {
+		"test": "mocha test/**/*.js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/victoramorim-king/CI-CD-example.git"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/victoramorim-king/CI-CD-example/issues"
+	},
+	"homepage": "https://github.com/victoramorim-king/CI-CD-example#readme"
+}
