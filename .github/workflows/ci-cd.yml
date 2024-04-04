@@ -28,13 +28,9 @@ jobs:
       - name: Authenticate with Docker Hub
         run: echo "${{ secrets.DOCKERHUB_TOKEN }}" | docker login --username ${{ secrets.DOCKERHUB_USERNAME }} --password-stdin
 
-        # Pull the latest image from Docker Hub
-      - name: Pull latest Docker image
-        run: docker pull victoramorimchagas/ci-cd-test:latest
-
         # Build Docker image
       - name: Build Docker image
-        run: docker build -t ci-cd-test .
+        run: docker build -t victoramorimchagas/ci-cd-test:latest .
 
         # Push Docker image to Docker Hub
       - name: Push Docker image
