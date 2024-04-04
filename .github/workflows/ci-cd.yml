@@ -48,8 +48,8 @@ jobs:
           username: ${{ secrets.EC2_USERNAME }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
-            docker stop $(docker ps -q --filter "ancestor=victoramorimchagas/ci-cd-test" --filter "publish=3000") || true
+            docker stop $(docker ps -q --filter "publish=3000") || true
             docker pull victoramorimchagas/ci-cd-test:latest
-            docker run -d --restart=unless-stopped -p 3000:3000 victoramorimchagas/ci-cd-test:latest
+            docker run -d -p 3000:3000 victoramorimchagas/ci-cd-test:latest
 
 
